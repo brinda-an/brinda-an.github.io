@@ -93,18 +93,10 @@ ul a:hover {
     font: bold;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-hr{
+/* hr{
     width: 100vw;
-}
+} */
 
-section{
-    width: 100%;
-    height: 95vh;
-    background-image: url("C:\Users\Administer\Desktop\Portfolio\static\img\bg2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
 
 .text-container p:nth-child(1){
     font-family: calibri;
@@ -142,30 +134,38 @@ section{
     margin: 40px 0px 25px;
 }
 
-.text-container{
+/* .text-container{
     position: absolute;
     left: 8%;
     top: 10%;
+} */
+
+.text-container {
+    position: relative;
+    padding: 50px;
 }
 
 
 .picture{
+    margin-bottom: 75px;
     height: 150px;
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     left: 70%;
     transform: translateX(-70%);
 }
 
 .about-container{
+    margin-left: 10%;
+    margin-right: 10%;
     width: 80%;
     height: 300px;
     background-color: rgb(247, 198, 156);
     border-radius: 20px;
     box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
     display: flex;
-    margin: -31% auto 20px auto;
-    position: relative;
+    /* margin: -31% auto 20px auto;
+    position: relative; */
     justify-content: space-evenly;
     align-items: center;
 }
@@ -345,4 +345,85 @@ footer{
 .social a:hover i{
     color: black;
     transition: all ease 0.5s;
+}
+
+@media(max-width:100px){
+    *{
+        -moz-box-sizing: border-box;
+    }
+    .text-container{
+        top:46%;
+    }
+    .about-container{
+        width: 90%;
+        border-radius: 10px;
+    }
+    .about-text{
+        width: 400px;
+    }
+    .about-text p:nth-child(1){
+        font-size: 20px;
+    }
+    .about-text p:nth-child(2){
+        font-size: 10px;
+    }
+    .about-text p:nth-child(3),
+    .about-text p:nth-child(4),
+    .about-text p:nth-child(5){
+        font-size: 14px;
+    }
+    .edu-container{
+        height: auto;
+    }
+    .box-container{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .edu-container{
+        padding: 2% 5% 0px 5%;
+    }
+    .box-1,.box-2, .box-3{
+        flex-grow: 1;
+        margin:10px;
+    }
+    .contact{
+        height: 200px;
+    }
+    .contact p{
+        font-size: 26px;
+    }
+}
+@media(max-width:750px){
+    .text-container p:nth-child(2){
+        line-height: 40px;
+        margin: 0px;
+        padding: 0px;
+    }
+    .text-container{
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width:80%;
+    }
+    .about-container{
+        top: 0px;
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        padding: 30px 0px;
+        align-items: center;
+    }
+    .about-text{
+        width:90%;
+        text-align: center;
+    }
+    .edu-text{
+        width: 100%;
+    }
+    .contact{
+        height: 180px;
+    }
+    .contact p{
+        font-size: 18px;
+    }
 }
